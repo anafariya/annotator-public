@@ -1355,7 +1355,7 @@ export function TaskDialog({
                 />
               </div>
             </div>
-            <div className='flex justify-between items-center space-x-6 p-4 bg-gray-50 rounded-lg shadow-sm'>
+           {template.type === 'test' && ( <div className='flex justify-between items-center space-x-6 p-4 bg-gray-50 rounded-lg shadow-sm'>
               {/* Left section - Switch for annotator assignment */}
               <div className='flex items-center space-x-3'>
                 <Switch
@@ -1369,7 +1369,7 @@ export function TaskDialog({
               </div>
 
               {/* Right section - AI model selector and settings icon */}
-            </div>
+            </div>)}
           </DialogHeader>
           <div className='max-h-[60vh] overflow-y-auto'>
             {tasks.map((task) => (
